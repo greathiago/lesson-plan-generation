@@ -32,7 +32,6 @@ export async function signup(formData: FormData) {
   }
 
   const { error } = await supabase.auth.signUp(data)
-
   if (error) {
     return redirect('/login?message=Could not authenticate user')
   }
